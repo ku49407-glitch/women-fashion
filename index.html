@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Woman Fashion Hub | Fashion for Women &amp; Girls</title>
+<meta name="description" content="Woman Fashion Hub: dresses, tops, bags, shoes, jewelry and beauty picks for women and girls.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Google AdSense: apni approval ke baad yahan script paste karein
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script> -->
+<style>
+:root{--green:#2E7D32;--green-dark:#1B5E20;--sage:#EAF3E8;--grey:#F2F2F2;--muted:#6B6B6B;--text:#333;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;color:var(--text);background:var(--white);line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.logo{font-family:'Playfair Display',Georgia,serif}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+.btn{display:inline-block;background:var(--green);color:#fff;padding:10px 20px;border-radius:6px;font-weight:600;border:0;cursor:pointer}
+.btn:hover{background:var(--green-dark)}
+.btn.light{background:#fff;color:var(--green)}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+
+/* Header */
+header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--grey)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.logo{font-size:24px;color:var(--green);font-weight:700}
+nav ul{display:flex;gap:22px;list-style:none;font-weight:500}
+nav a:hover{color:var(--green)}
+.menu-btn{display:none;background:none;border:1px solid var(--grey);border-radius:6px;padding:6px 10px;font-size:20px;cursor:pointer}
+
+/* Ads */
+.ad{background:var(--grey);border:1px dashed #c9c9c9;color:var(--muted);text-align:center;font-size:13px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.ad-top{min-height:90px;margin:16px auto}
+.ad-side{width:160px;min-height:600px;position:sticky;top:90px}
+.ad-row{grid-column:1/-1;min-height:90px}
+.ad-mobile{display:none;min-height:100px;margin:16px 0}
+
+/* Hero */
+.hero{background:linear-gradient(120deg,var(--sage),var(--grey));border-radius:12px;padding:56px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:320px}
+.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.15;color:var(--green-dark);max-width:520px}
+.hero p{margin:14px 0 22px;color:var(--muted);max-width:440px}
+.hero img{width:300px;height:280px;object-fit:cover;border-radius:12px}
+
+h2.title{font-size:28px;margin:44px 0 18px;color:var(--green-dark)}
+
+/* Layout with side ads */
+.page{display:flex;gap:20px;justify-content:center;align-items:flex-start}
+.main{flex:1;min-width:0}
+
+/* Categories */
+.cats{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.cat{background:var(--sage);border-radius:10px;padding:26px 8px;text-align:center;font-weight:600;transition:.2s}
+.cat:hover{background:var(--green);color:#fff}
+.cat span{display:block;font-size:30px}
+
+/* Products */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{border:1px solid var(--grey);border-radius:10px;overflow:hidden;background:#fff}
+.card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--grey)}
+.card div{padding:12px}
+.card h3{font-family:Inter,sans-serif;font-size:15px;font-weight:600}
+.price{color:var(--green);font-weight:600;margin:4px 0 10px}
+.card .btn{width:100%;text-align:center;font-size:14px;padding:9px}
+
+/* Offer */
+.offer{background:var(--green);color:#fff;border-radius:12px;padding:40px;text-align:center;margin-top:44px}
+.offer h2{font-size:30px;margin-bottom:8px}
+.offer p{margin-bottom:16px}
+
+/* Reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review{background:var(--grey);padding:20px;border-radius:10px}
+.stars{color:#e0a800}
+.review b{display:block;margin-top:8px}
+
+/* Newsletter */
+.news{background:var(--sage);border-radius:12px;padding:36px;text-align:center;margin:44px 0}
+.news form{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.news input{padding:10px 14px;border:1px solid #ccc;border-radius:6px;min-width:240px;font:inherit}
+
+/* Footer */
+footer{background:var(--grey);margin-top:20px;padding:40px 0 20px}
+.fcols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+footer h4{color:var(--green-dark);margin-bottom:8px}
+footer li{list-style:none;margin:4px 0;color:var(--muted);font-size:14px}
+footer li a:hover{color:var(--green)}
+.disc{border-top:1px solid #ddd;margin-top:24px;padding-top:14px;font-size:13px;color:var(--muted);text-align:center}
+
+@media(max-width:1250px){.ad-side{display:none}}
+@media(max-width:900px){
+  .cats{grid-template-columns:repeat(3,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .reviews,.fcols{grid-template-columns:1fr 1fr}
+  .hero img{display:none}.hero{padding:36px 22px}
+  .ad-mobile{display:flex}
+}
+@media(max-width:700px){
+  .menu-btn{display:block}
+  nav{position:absolute;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--grey);display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0;padding:8px 16px}
+  nav li a{display:block;padding:10px 0}
+  .reviews,.fcols{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="#" class="logo">Woman Fashion Hub</a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#new">New Arrivals</a></li>
+        <li><a href="#sale">Sale</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+  </div>
+</header>
+
+<!-- AD: below header -->
+<div class="wrap">
+  <div class="ad ad-top">
+    <!-- Yahan AdSense/banner code paste karein -->
+    Ad space: 728x90 banner
+  </div>
+</div>
+
+<div class="wrap page">
+  <!-- AD: left sidebar -->
+  <aside class="ad ad-side">Ad 160x600</aside>
+
+  <main class="main">
+    <section class="hero">
+      <div>
+        <h1>Style that feels like you</h1>
+        <p>Dresses, bags, shoes and jewelry picked for women and girls. Tap any product to see it on AliExpress.</p>
+        <a class="btn" href="#shop">Shop now</a>
+      </div>
+      <img src="https://picsum.photos/seed/fashion-hero/600/560" alt="Fashion model in a green dress" loading="lazy">
+    </section>
+
+    <h2 class="title" id="categories">Shop by category</h2>
+    <div class="cats">
+      <a class="cat" href="#shop"><span>&#128087;</span>Dresses</a>
+      <a class="cat" href="#shop"><span>&#128085;</span>Tops</a>
+      <a class="cat" href="#shop"><span>&#128092;</span>Bags</a>
+      <a class="cat" href="#shop"><span>&#128096;</span>Shoes</a>
+      <a class="cat" href="#shop"><span>&#128142;</span>Jewelry</a>
+      <a class="cat" href="#shop"><span>&#128132;</span>Beauty</a>
+    </div>
+
+    <div class="ad ad-mobile">Mobile ad 320x100</div>
+
+    <h2 class="title" id="shop">Featured products</h2>
+    <div class="grid" id="featured"></div>
+
+    <section class="offer" id="sale">
+      <h2>Up to 50% off this week</h2>
+      <p>Check the latest deals on AliExpress through our links.</p>
+      <a class="btn light" href="AFFILIATE_LINK_HERE" target="_blank" rel="nofollow sponsored noopener">See deals</a>
+    </section>
+
+    <h2 class="title" id="new">New arrivals</h2>
+    <div class="grid" id="arrivals"></div>
+
+    <h2 class="title">What shoppers say</h2>
+    <div class="reviews">
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Lovely dresses and easy to find what I wanted.</p><b>Ayesha K.</b></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div><p>Great bag picks, the colors look just like the photos.</p><b>Sana R.</b></div>
+      <div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Found a gift for my sister in minutes.</p><b>Hira M.</b></div>
+    </div>
+
+    <section class="news">
+      <h2>Get new arrivals in your inbox</h2>
+      <!-- Form ko Mailchimp/Formspree se connect karein -->
+      <form onsubmit="event.preventDefault();this.innerHTML='<b>Thank you for subscribing!</b>'">
+        <input type="email" placeholder="Your email" required aria-label="Email">
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- AD: right sidebar -->
+  <aside class="ad ad-side">Ad 160x600</aside>
+</div>
+
+<footer id="about">
+  <div class="wrap">
+    <div class="fcols">
+      <div><h4>Woman Fashion Hub</h4><p style="font-size:14px;color:var(--muted)">Fashion and accessories for women and girls.</p></div>
+      <div><h4>Shop</h4><ul><li><a href="#shop">Dresses</a></li><li><a href="#shop">Bags</a></li><li><a href="#shop">Shoes</a></li></ul></div>
+      <div><h4>Policies</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms</a></li><li><a href="#">Shipping &amp; Returns</a></li><li><a href="#">Affiliate Disclosure</a></li></ul></div>
+      <div id="contact"><h4>Contact</h4><ul><li>hello@womanfashionhub.com</li></ul></div>
+    </div>
+    <p class="disc">Affiliate disclosure: Some links are affiliate links. We may earn a commission if you buy through them, at no extra cost to you. Orders are placed and shipped by AliExpress sellers.<br>&copy; 2026 Woman Fashion Hub</p>
+  </div>
+</footer>
+
+<script>
+/* ====== YAHAN APNE PRODUCTS ADD KAREIN ======
+   link = aapka AliExpress affiliate tracking link
+   img  = product image URL */
+var AFFILIATE_BUTTON_TEXT = "Buy on AliExpress";
+var products = [
+  {name:"Floral Summer Dress", price:"From $14.99", img:"https://picsum.photos/seed/dress1/400/400", link:"AFFILIATE_LINK_HERE"},
+  {name:"Casual Cotton Top", price:"From $8.49", img:"https://picsum.photos/seed/top1/400/400", link:"AFFILIATE_LINK_HERE"},
+  {name:"Leather Shoulder Bag", price:"From $19.99", img:"https://picsum.photos/seed/bag1/400/400", link:"AFFILIATE_LINK_HERE"},
+  {name:"Comfort Flat Shoes", price:"From $16.50", img:"https://picsum.photos/seed/shoe1/400/400", link:"AFFILIATE_LINK_HERE"},
+  {name:"Gold Pendant Necklace", price:"From $5.99", img:"https://picsum.photos/seed/jewel1/400/400", link:"AFFILIATE_LINK_HERE"},
+  {name:"Makeup Brush Set", price:"From $7.25", img:"https://picsum.photos/seed/beauty1/400/400", link:"AFFILIATE_LINK_HERE"},
+  {name:"Pleated Midi Skirt", price:"From $12.00", img:"https://picsum.photos/seed/skirt1/400/400", link:"AFFILIATE_LINK_HERE"},
+  {name:"Crossbody Mini Bag", price:"From $11.80", img:"https://picsum.photos/seed/bag2/400/400", link:"AFFILIATE_LINK_HERE"}
+];
+
+function render(id, list, adAfter){
+  var el = document.getElementById(id), html = "";
+  list.forEach(function(p, i){
+    html += '<article class="card"><img src="'+p.img+'" alt="'+p.name+'" loading="lazy"><div>' +
+      '<h3>'+p.name+'</h3><p class="price">'+p.price+'</p>' +
+      '<a class="btn" href="'+p.link+'" target="_blank" rel="nofollow sponsored noopener">'+AFFILIATE_BUTTON_TEXT+'</a></div></article>';
+    if(adAfter && i === 3) html += '<div class="ad ad-row">Ad between product rows</div>';
+  });
+  el.innerHTML = html;
+}
+render("featured", products, true);
+render("arrivals", products.slice().reverse().slice(0,4), false);
+</script>
+</body>
+</html>
